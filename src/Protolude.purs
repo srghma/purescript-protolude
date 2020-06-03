@@ -88,7 +88,7 @@ import Partial.Unsafe (unsafePartial)
 
 import Effect (Effect)
 import Effect.Class (class MonadEffect, liftEffect)
-import Effect.Aff (Aff, launchAff)
+import Effect.Aff (Aff, launchAff, launchAff_)
 import Effect.Aff.Class (class MonadAff, liftAff)
 
 import Debug.Trace as Internal.DebugTrace

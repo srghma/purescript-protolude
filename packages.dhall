@@ -121,7 +121,20 @@ let additions =
 let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.6-20200502/packages.dhall sha256:1e1ecbf222c709b76cc7e24cf63af3c2089ffd22bbb1e3379dfd3c07a1787694
 
-let overrides = {=}
+let overrides =
+  { either =
+      { dependencies =
+        [ "bifunctors"
+        , "control"
+        , "foldable-traversable"
+        , "invariant"
+        , "maybe"
+        , "prelude"
+        ]
+      , repo = "ssh://git@github.com/srghma/purescript-either.git"
+      , version = "patch-1"
+      }
+  }
 
 let additions = {=}
 

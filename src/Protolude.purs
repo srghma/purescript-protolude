@@ -1,7 +1,7 @@
 -- https://github.com/natefaubion/slamdata/blob/master/src/SlamData/Prelude.purs
 
 module Protolude
-  ( (\/), traceId --, (|>), (<|), (||>), (<||)
+  ( traceId --, (|>), (<|), (||>), (<||)
   , type ($), type (#), type (<<<), type (>>>)
   , undefined
   , traceWithoutInspect, traceWithoutInspectId, traceWithoutInspectM, spyM
@@ -67,7 +67,7 @@ import Data.Bifunctor (class Bifunctor, bimap, lmap, rmap)
 import Data.Bitraversable (class Bitraversable, bitraverse, bisequence, bifor)
 import Data.Const (Const(..))
 import Data.Either (Either(..), either, isLeft, isRight, fromRight, note)
-import Data.Either.Nested (type (\/))
+import Data.Either.Nested (type (\/), (\/))
 import Data.Foldable (class Foldable, traverse_, for_, foldMap, foldl, foldr, fold, intercalate)
 import Data.Functor (($>), (<$))
 import Data.Functor.Coproduct (Coproduct, coproduct, left, right)
@@ -94,8 +94,6 @@ import Effect.Aff.Class (class MonadAff, liftAff)
 import Debug.Trace as Internal.DebugTrace
 import Unsafe.Coerce as Internal.Unsafe.Coerce
 import Prim.TypeError as Internal.Prim.TypeError
-
-infixr 5 either as \/
 
 traceId :: ∀ a . Internal.DebugTrace.DebugWarning => a -> a
 traceId a = trace a (const a)

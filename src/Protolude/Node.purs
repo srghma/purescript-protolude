@@ -5,8 +5,8 @@ import Protolude
 import Effect.Aff (Error)
 
 import Effect.Class.Console as Console
-import Ansi.Codes as Ansi
-import Ansi.Output as Ansi
+import Ansi.Codes (Color(..)) as Ansi
+import Ansi.Output (foreground, withGraphics) as Ansi
 import Node.Process as NodeProcess
 import Node.Path as NodePath
 import Node.FS.Aff as NodeFS.Aff

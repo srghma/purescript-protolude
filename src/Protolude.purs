@@ -41,6 +41,7 @@ module Protolude
   , module Data.List
   , module Partial.Unsafe
   , module Effect
+  , module Effect.Exception
   , module Effect.Class
   , module Effect.Aff
   , module Effect.Aff.Class
@@ -88,6 +89,7 @@ import Partial.Unsafe (unsafePartial)
 
 import Effect (Effect)
 import Effect.Class (class MonadEffect, liftEffect)
+import Effect.Exception (error, Error)
 import Effect.Aff (Aff, launchAff, launchAff_)
 import Effect.Aff.Class (class MonadAff, liftAff)
 

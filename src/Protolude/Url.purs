@@ -1,4 +1,4 @@
-module Protolude.Url (Url, mkUrl, unUrl) where
+module Protolude.Url (Url, mkUrl, unUrl, urlRegexString, urlRegex) where
 
 import Protolude
 

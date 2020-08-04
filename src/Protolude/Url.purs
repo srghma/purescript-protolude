@@ -1,4 +1,4 @@
-module Protolude.Url (Url, mkUrl, unUrl, urlRegexString, urlRegex) where
+module Protolude.Url (Url, mkUrl, unsafeUrl, unUrl, urlRegexString, urlRegex) where
 
 import Protolude
 
@@ -27,6 +27,9 @@ mkUrl string =
   if Regex.test urlRegex string
     then Just $ Url string
     else Nothing
+
+unsafeUrl :: String -> Url
+unsafeUrl = unsafeCoerce
 
 unUrl :: Url -> String
 unUrl = unsafeCoerce

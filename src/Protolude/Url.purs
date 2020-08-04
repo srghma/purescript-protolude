@@ -6,6 +6,7 @@ import Data.Generic.Rep.Show (genericShow)
 import Data.String.Regex (Regex, test) as Regex
 import Data.String.Regex.Flags (noFlags) as Regex.Flags
 import Data.String.Regex.Unsafe (unsafeRegex) as Regex
+import Unsafe.Coerce (unsafeCoerce)
 
 newtype Url = Url String
 
@@ -28,4 +29,4 @@ mkUrl string =
     else Nothing
 
 unUrl :: Url -> String
-unUrl (Url string) = string
+unUrl = unsafeCoerce

@@ -2,8 +2,6 @@ module Protolude.Node where
 
 import Protolude
 
-import Effect.Aff (Error)
-
 import Effect.Class.Console as Console
 import Ansi.Codes (Color(..)) as Ansi
 import Ansi.Output (foreground, withGraphics) as Ansi

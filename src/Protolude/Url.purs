@@ -1,4 +1,4 @@
-module Protolude.Url (Url, mkUrl, unsafeUrl, unUrl, urlRegexString, urlRegex) where
+module Protolude.Url (Url, mkUrl, unsafeUrl, unUrl, urlRegex) where
 
 import Protolude
 
@@ -16,15 +16,11 @@ derive instance urlOrd :: Ord Url
 derive instance urlGeneric :: Generic Url _
 instance urlShow :: Show Url where show = genericShow
 
-urlRegexString :: String
-urlRegexString = """(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"""
-
-urlRegex :: Regex.Regex
-urlRegex = Regex.unsafeRegex urlRegexString Regex.Flags.noFlags
+foreign import urlRegex :: { exact :: Boolean, strict :: Boolean } -> Regex.Regex
 
 mkUrl :: String -> Maybe Url
 mkUrl string =
-  if Regex.test urlRegex string
+  if Regex.test (urlRegex { exact: true, strict: true }) string
     then Just $ Url string
     else Nothing
 

@@ -1,5 +1,6 @@
-// from https://github.com/kevva/url-regex
+// use https://github.com/niftylettuce/url-regex-safe
 //
 // to install
-// npm install url-regex
-exports.urlRegex = require('url-regex');
+//
+// npm install url-regex-safe
+exports.urlRegex = require('url-regex-safe');

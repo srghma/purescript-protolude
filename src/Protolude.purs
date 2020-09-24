@@ -45,6 +45,7 @@ module Protolude
   , module Effect.Class
   , module Effect.Aff
   , module Effect.Aff.Class
+  , module Type.Row
   )
   where
 
@@ -82,6 +83,7 @@ import Data.Tuple (Tuple(..), fst, snd, uncurry)
 import Data.Tuple.Nested (type (/\), (/\))
 import Data.Variant (SProxy(..), Variant)
 import Data.Void (Void, absurd)
+import Type.Row (type (+))
 
 import Debug.Trace (trace, traceM, spy)
 

@@ -10,8 +10,8 @@ import Node.Path as NodePath
 import Node.FS.Aff as NodeFS.Aff
 import Node.FS.Stats as NodeFS.Stats
 
-filePathExistsAndIsDir :: ∀ m . MonadError Error m => MonadAff m => NodePath.FilePath -> m Boolean
-filePathExistsAndIsDir filepath = (try $ liftAff (NodeFS.Aff.stat filepath) <#> NodeFS.Stats.isDirectory) <#> (const false \/ identity)
+filePathExistsAndIs :: ∀ m . MonadError Error m => MonadAff m => (NodeFS.Stats.Stats -> Boolean) -> NodePath.FilePath -> m Boolean
+filePathExistsAndIs is filepath = (try $ liftAff (NodeFS.Aff.stat filepath) <#> is) <#> (const false \/ identity)
 
 -- | Exit the script with the given exit code, printing the given message to
 -- | standard output if the exit code is 0, and standard error otherwise.

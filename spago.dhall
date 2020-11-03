@@ -19,6 +19,7 @@ You can edit this file as you like.
   , "variant"
   , "ansi"
   , "generics-rep"
+  , "url-regex-safe"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]

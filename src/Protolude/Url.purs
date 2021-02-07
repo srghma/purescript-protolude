@@ -2,7 +2,7 @@ module Protolude.Url (Url, mkUrl, unsafeUrl, unUrl) where
 
 import Protolude
 
-import Data.Generic.Rep.Show (genericShow)
+import Data.Show.Generic (genericShow)
 import Data.String.Regex (Regex, test) as Regex
 import Unsafe.Coerce (unsafeCoerce)
 import UrlRegexSafe

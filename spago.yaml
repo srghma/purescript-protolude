@@ -1,0 +1,145 @@
+package:
+  name: protolude
+  publish:
+    license: MIT
+    version: 1.0.0
+    location:
+      githubOwner: purescript-contrib
+      githubRepo: purescript-protolude
+  dependencies:
+    - affjax
+    - ansi
+    - console
+    - debug
+    - effect
+    - generics-rep
+    - node-fs-aff
+    - node-path
+    - node-process
+    - prelude
+    - proxy
+    - psci-support
+    - record
+    - typelevel-prelude
+    - url-regex-safe
+    - variant
+  test:
+    main: Test.Main
+    dependencies:
+      - console
+      - effect
+workspace:
+  extraPackages:
+    browser-cookies:
+      git: https://github.com/srghma/purescript-browser-cookies.git
+      ref: patch-1
+    dodo-printer:
+      git: https://github.com/natefaubion/purescript-dodo-printer.git
+      ref: master
+    dom-indexed:
+      git: https://github.com/srghma/purescript-dom-indexed.git
+      ref: patch-1
+    # either:
+    #   git: https://github.com/srghma/purescript-either.git
+    #   ref: 5aac6a0
+    envparse:
+      git: https://github.com/srghma/purescript-envparse.git
+      ref: master
+    express:
+      git: https://github.com/srghma/purescript-express.git
+      ref: master
+    express-passport:
+      git: https://github.com/srghma/purescript-express-passport.git
+      ref: master
+    foreign-js-map:
+      git: https://github.com/srghma/purescript-foreign-js-map.git
+      ref: master
+    foreign-js-set:
+      git: https://github.com/srghma/purescript-foreign-js-set.git
+      ref: master
+    free-alternative:
+      git: https://github.com/srghma/purescript-free-alternative.git
+      ref: master
+    graphql-client:
+      git: https://github.com/purescript-graphql-client/purescript-graphql-client.git
+      ref: master
+    halogen:
+      git: https://github.com/srghma/purescript-halogen.git
+      ref: hydration-wip-2
+    halogen-formless:
+      git: https://github.com/srghma/purescript-halogen-formless.git
+      ref: master
+    halogen-material-components-web:
+      git: https://github.com/srghma/purescript-halogen-material-components-web.git
+      ref: master
+    halogen-select:
+      git: https://github.com/srghma/purescript-halogen-select.git
+      ref: master
+    halogen-storybook:
+      git: https://github.com/srghma/purescript-halogen-storybook.git
+      ref: master
+    halogen-svg:
+      git: https://github.com/srghma/purescript-halogen-svg.git
+      ref: master
+    halogen-vdom:
+      git: https://github.com/srghma/purescript-halogen-vdom.git
+      ref: master
+    halogen-vdom-string-renderer:
+      git: https://github.com/srghma/purescript-halogen-vdom-string-renderer.git
+      ref: master
+    homogeneous-records:
+      git: https://github.com/srghma/purescript-homogeneous-records.git
+      ref: master
+    html-parser:
+      git: https://github.com/srghma/purescript-html-parser.git
+      ref: master
+    hyper:
+      git: https://github.com/srghma/hyper.git
+      ref: patch-1
+    # media-types:
+    #   git: https://github.com/srghma/purescript-media-types.git
+    #   ref: patch-1
+    mkdirp-aff:
+      git: https://github.com/leighman/purescript-mkdirp-aff.git
+      ref: master
+    node-http:
+      git: https://github.com/srghma/purescript-node-http.git
+      ref: master
+    # node-process:
+    #   git: https://github.com/srghma/purescript-node-process.git
+    #   ref: master
+    postgresql-client:
+      git: https://github.com/rightfold/purescript-postgresql-client.git
+      ref: master
+    ps-cst:
+      git: https://github.com/purescript-codegen/purescript-ps-cst.git
+      ref: master
+    record-extra-srghma:
+      git: https://github.com/srghma/purescript-record-extra-srghma.git
+      ref: master
+    slug:
+      git: https://github.com/srghma/purescript-slug.git
+      ref: master
+    spec-should-equal-or-satisfy:
+      git: https://github.com/srghma/purescript-spec-should-equal-or-satisfy.git
+      ref: master
+    unordered-collection:
+      git: https://github.com/fehrenbach/purescript-unordered-collections.git
+      ref: master
+    url-regex-safe:
+      git: https://github.com/srghma/purescript-url-regex-safe.git
+      ref: master
+    # web-dom:
+    #   git: https://github.com/srghma/purescript-web-dom.git
+    #   ref: patch-1
+    web-intersection-observer:
+      git: https://github.com/srghma/purescript-web-intersection-observer.git
+      ref: master
+    webpack-loader-api:
+      git: https://github.com/srghma/purescript-webpack-loader-api.git
+      ref: master
+    yarn:
+      git: https://github.com/Thimoteus/purescript-yarn.git
+      ref: master
+  packageSet:
+    registry: 64.2.0
